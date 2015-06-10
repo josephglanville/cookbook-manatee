@@ -1,0 +1,39 @@
+DEPENDENCIES
+  devbox
+    git: https://github.com/josephglanville/cookbook-devbox
+    revision: f80f8eef8842ed0276a777bd59f23a7c53e02724
+  manatee
+    path: .
+    metadata: true
+  rvm
+    git: https://github.com/josephglanville/chef-rvm
+    revision: 3b57b93d7d56cbf7e91c10f82428fbf48c1bb381
+
+GRAPH
+  apt (2.7.0)
+  build-essential (2.2.3)
+  chef_gem (0.1.0)
+  chef_handler (1.1.9)
+  devbox (0.1.0)
+    apt (>= 0.0.0)
+    git (>= 0.0.0)
+    rvm (>= 0.0.0)
+  dmg (2.2.2)
+  git (4.2.2)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    windows (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  java (1.31.0)
+  manatee (0.1.0)
+    apt (>= 0.0.0)
+    tar (~> 0.6.0)
+  rvm (0.10.1)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  tar (0.6.0)
+  windows (1.37.0)
+    chef_handler (>= 0.0.0)
+  yum (3.6.1)
+  yum-epel (0.6.0)
+    yum (~> 3.0)

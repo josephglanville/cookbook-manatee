@@ -1,0 +1,7 @@
+include_recipe 'manatee::repo'
+include_recipe 'manatee::zfs'
+include_recipe 'manatee::postgresql'
+include_recipe 'manatee::nodejs'
+include_recipe 'manatee::install'
+include_recipe 'manatee::config'
+include_recipe 'manatee::service'
