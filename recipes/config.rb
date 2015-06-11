@@ -5,3 +5,13 @@ directory '/etc/manatee'
     content JSON.pretty_generate(node['manatee'][f])
   end
 end
+
+%w{postgresql recovery}.each do |f|
+  file ::File.join('/etc/manatee', "#{f}.conf") do
+    content node['manatee']["#{f}_conf"].map {|k,v| "#{k} = #{v}"}.join("\n")
+  end
+end
+
+template '/etc/manatee/pg_hba.conf' do
+  variables entries: node['manatee']['pg_hba_conf']
+end

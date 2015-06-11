@@ -1,0 +1,5 @@
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+<% @entries.each do |name, entry|%>
+# <%= name %>
+<%= entry['type'] %>  <%= entry['db'] %>    <%= entry['user']%>   <%= entry['address']%>    <%= entry['method'] %>
+<% end %>

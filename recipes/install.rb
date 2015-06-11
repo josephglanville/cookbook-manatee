@@ -7,6 +7,7 @@ end
 # do npm install
 execute 'install manatee dependencies' do
   command 'npm install'
+  cwd '/opt/manatee'
 end
 
 cookbook_file '/opt/manatee/update_config' do
