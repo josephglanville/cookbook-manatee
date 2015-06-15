@@ -12,6 +12,17 @@ end
   end
 end
 
+cookbook_file '/opt/manatee/bin/sitter' do
+  source 'sitter-wrapper.sh'
+  mode 0755
+end
+
 template '/etc/manatee/pg_hba.conf' do
   variables entries: node['manatee']['pg_hba_conf']
+end
+
+# Ensure the log directory is writable by the PG user
+directory '/var/log/postgresl' do
+  owner 'postgres'
+  group 'postgres'
 end

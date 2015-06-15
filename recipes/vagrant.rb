@@ -6,5 +6,16 @@ service 'exhibitor' do
   action :start
 end
 
-# TODO(jpg) create ZFS stuff and mount it
+# Create ZFS pool
+execute 'create zfs pool' do
+  command 'zpool create -f tank /dev/sdb'
+  not_if 'zpool status tank'
+end
+
+# Create manatee dataset
+execute 'create manatee dataset' do
+  command 'zfs create tank/manatee'
+  not_if 'zfs list tank/manatee'
+end
+
 # TODO(jpg) see if we need to do initdb ourselves

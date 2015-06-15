@@ -1,3 +1,5 @@
+package 'git'
+
 git '/opt/manatee' do
   repository 'https://github.com/josephglanville/manatee'
   action :checkout
