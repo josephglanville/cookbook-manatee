@@ -22,7 +22,7 @@ template '/etc/manatee/pg_hba.conf' do
 end
 
 # Ensure the log directory is writable by the PG user
-directory '/var/log/postgresl' do
+directory '/var/log/postgresql' do
   owner 'postgres'
   group 'postgres'
 end

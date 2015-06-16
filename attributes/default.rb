@@ -9,7 +9,7 @@ default['manatee']['snapshotter']['zfsCommand'] = '/sbin/zfs'
 
 # Backupserver settings
 default['manatee']['backupserver']['backupSenderCfg']['dataset'] = '/tank/manatee'
-default['manatee']['backupserver']['backupSenderCfg']['zfsPath'] = '/usr/sbin/zfs'
+default['manatee']['backupserver']['backupSenderCfg']['zfsPath'] = '/sbin/zfs'
 default['manatee']['backupserver']['backupServerCfg']['port'] = 10_002
 
 # Sitter settings
@@ -21,7 +21,7 @@ default['manatee']['sitter']['ttl'] = 60
 default['manatee']['sitter']['zkCfg']['opts']['sessionTimeout'] = 60_000
 # default['manatee']['sitter']['zoneId'] = 'f9e6661b-82e6-4c19-873c-eb869d689446'
 default['manatee']['sitter']['postgresPort'] = 5432
-default['manatee']['sitter']['postgresMgrCfg']['dataDir'] = '/tank/manatee'
+default['manatee']['sitter']['postgresMgrCfg']['dataDir'] = '/tank/manatee/data'
 default['manatee']['sitter']['postgresMgrCfg']['dbUser'] = 'postgres'
 default['manatee']['sitter']['postgresMgrCfg']['hbaConf'] = '/etc/manatee/pg_hba.conf'
 default['manatee']['sitter']['postgresMgrCfg']['dbUser'] = 'postgres'
