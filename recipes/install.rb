@@ -12,7 +12,7 @@ execute 'install manatee dependencies' do
   cwd '/opt/manatee'
 end
 
-cookbook_file '/opt/manatee/update_config' do
+cookbook_file '/opt/manatee/bin/update_config' do
   source 'update_config.rb'
   mode 0755
 end

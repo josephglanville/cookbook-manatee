@@ -5,6 +5,7 @@ default['manatee']['node_version'] = '0.12'
 default['manatee']['snapshotter']['dataset'] = 'tank/manatee'
 default['manatee']['snapshotter']['pollInterval'] = 3_600_000
 default['manatee']['snapshotter']['snapshotNumber'] = 50
+default['manatee']['snapshotter']['zfsCommand'] = '/sbin/zfs'
 
 # Backupserver settings
 default['manatee']['backupserver']['backupSenderCfg']['dataset'] = '/tank/manatee'

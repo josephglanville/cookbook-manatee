@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.vmx["scsi0:1.fileName"] = create_vmdk('sdb', '10000MB')
   end
 
-  config.vm.network 'private_network', ip: '192.168.69.180'
+  config.vm.network 'private_network', ip: '192.168.70.180'
 
   config.vm.provision 'shell', path: 'vagrant/provision.sh'
 
