@@ -1,4 +1,4 @@
-include_recipe 'manatee::zookeeper'
+include_recipe 'zookeeper'
 
 service 'exhibitor' do
   provider Chef::Provider::Service::Upstart
