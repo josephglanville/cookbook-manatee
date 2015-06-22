@@ -63,6 +63,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         mkdir -p /var/lib/exhibitor
         cat << EOH > /etc/env_vars
         NODE_IP="#{ip}"
+        SHARD="vagrant"
         PG_URL="tcp://postgres@#{ip}:5432/postgres"
         ZK_URL="#{(1..ZK_NODES).map { |z| "172.16.22.1#{z}:2181" }.join(' ')}"
         EOH

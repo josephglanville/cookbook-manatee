@@ -15,7 +15,7 @@ default['manatee']['backupserver']['backupServerCfg']['port'] = 10_002
 # Sitter settings
 default['manatee']['sitter']['backupPort'] = 10_002
 # default['manatee']['sitter']['ip'] = '0.0.0.0'
-default['manatee']['sitter']['shardPath'] = '/manatee/1'
+# default['manatee']['sitter']['shardPath'] = '/manatee/1'
 default['manatee']['sitter']['ttl'] = 60
 # default['manatee']['sitter']['zkCfg']['connStr'] = '0.0.0.0:2181'
 default['manatee']['sitter']['zkCfg']['opts']['sessionTimeout'] = 60_000
