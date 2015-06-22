@@ -27,6 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   (1..ZK_NODES).each do |i|
     config.vm.define "zk#{i}" do |zk|
       ip = "172.16.22.1#{i}"
+      zk.hostname "zk#{i}"
       zk.vm.network 'private_network', ip: ip
 
       zk.vm.provision 'shell', inline: <<-EOF.gsub(/^\s*/, '')
@@ -47,6 +48,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   (1..PG_NODES).each do |i|
     config.vm.define "pg#{i}" do |pg|
       ip = "172.16.22.2#{i}"
+      pg.hostname "pg#{i}"
       pg.vm.provider :virtualbox do |vb|
         vb.customize ['modifyvm', :id, '--memory', NODE_MEM]
       end
