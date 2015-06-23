@@ -5,7 +5,7 @@ path = '/etc/manatee/sitter.json'
 config = JSON.load(File.read(path))
 config['ip'] = ENV['NODE_IP']
 config['shardPath'] = "/manatee/#{ENV['SHARD']}"
-config['postgresMgrCfg']['url'] = ENV['PG_URL']
+config['postgresMgrCfg']['url'] = "tcp://postgres@#{ENV['NODE_IP']}:5432"
 config['postgresMgrCfg']['zfsClientCfg']['zfsHost'] = ENV['NODE_IP']
 if ENV['EXHIBITOR_HOST']
   # Then try use exhibitor-discovery to get ZK IPs
