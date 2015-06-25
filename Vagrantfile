@@ -69,6 +69,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         NODE_IP="#{ip}"
         SHARD="vagrant"
         ZK_URL="#{(1..ZK_NODES).map { |z| "172.16.22.1#{z}:2181" }.join(' ')}"
+        ZONE_ID="pg#{i}"
         EOH
       EOF
 

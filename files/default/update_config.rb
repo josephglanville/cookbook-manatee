@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'json'
-require 'securerandom'
 path = '/etc/manatee/sitter.json'
 config = JSON.load(File.read(path))
 config['ip'] = ENV['NODE_IP']
@@ -14,5 +13,5 @@ if ENV['EXHIBITOR_HOST']
 else
   config['zkCfg']['connStr'] = ENV['ZK_URL']
 end
-config['zoneId'] = SecureRandom.uuid
+config['zoneId'] = ENV['ZONE_ID']
 File.write(path, JSON.pretty_generate(config))
