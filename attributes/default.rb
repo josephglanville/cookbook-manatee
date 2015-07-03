@@ -17,6 +17,7 @@ default['manatee']['sitter']['backupPort'] = 10_002
 # default['manatee']['sitter']['ip'] = '0.0.0.0'
 # default['manatee']['sitter']['shardPath'] = '/manatee/1'
 default['manatee']['sitter']['ttl'] = 60
+default['manatee']['sitter']['startCommand'] = 'start manatee-sitter'
 # default['manatee']['sitter']['zkCfg']['connStr'] = '0.0.0.0:2181'
 default['manatee']['sitter']['zkCfg']['opts']['sessionTimeout'] = 60_000
 # default['manatee']['sitter']['zoneId'] = 'f9e6661b-82e6-4c19-873c-eb869d689446'
