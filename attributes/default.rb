@@ -3,8 +3,8 @@ default['manatee']['node_version'] = '0.12'
 
 # Snapshotter settings
 default['manatee']['snapshotter']['dataset'] = 'tank/manatee'
-default['manatee']['snapshotter']['pollInterval'] = 3_600_000
-default['manatee']['snapshotter']['snapshotNumber'] = 50
+default['manatee']['snapshotter']['pollInterval'] = 300000 # 5 Minutes
+default['manatee']['snapshotter']['snapshotNumber'] = 18 # 1.5 Hours
 default['manatee']['snapshotter']['zfsPath'] = '/sbin/zfs'
 
 # Backupserver settings
